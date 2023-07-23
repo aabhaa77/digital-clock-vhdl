@@ -1,0 +1,61 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+package EE232 is
+
+component NOT_1 is
+
+	port( I0 : in std_logic;
+			O0 : out std_logic);
+end component;
+
+component AND_2 is
+
+	port( I0, I1 : in std_logic;
+			O0 : out std_logic);
+end component;
+
+component OR_2 is
+
+	port( I0, I1 : in std_logic;
+			O0 : out std_logic);
+end component;
+
+component XOR_2 is
+
+	port( I0, I1 : in std_logic;
+			O0 : out std_logic);
+end component;
+
+COMPONENT HALF_ADDER is
+
+	port( A, B : in std_logic;
+			S, C : out std_logic);
+end COMPONENT;
+
+component FULL_ADDER is
+
+	port( I0, I1,  I2: in std_logic;
+			S, C : out std_logic);
+end component;
+
+COMPONENT MUX_2X1 IS
+
+	PORT(X0, S, X1: IN STD_LOGIC;
+	Y : OUT STD_LOGIC);
+END COMPONENT;
+
+COMPONENT DEMUX_1X2 IS
+
+	PORT(X0, S: IN STD_LOGIC;
+	Y0, Y1 : OUT STD_LOGIC);
+END COMPONENT;
+
+COMPONENT FOUR_BIT_ADDER IS
+
+	port (A : in std_logic_vector(3 downto 0);
+		B : in std_logic_vector(3 downto 0);
+		CIN : in std_logic;
+		SUM : out std_logic_vector(4 downto 0));
+		
+end COMPONENT;
+end package;
